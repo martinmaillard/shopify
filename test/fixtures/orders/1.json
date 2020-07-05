@@ -46,6 +46,17 @@
         "type": "percentage"
       }
     ],
+    "discount_applications": [
+      {
+        "type": "discount_code",
+        "value": "10.00",
+        "value_type": "percentage",
+        "allocation_method": "across",
+        "target_selection": "all",
+        "target_type": "line_item",
+        "code": "TENOFF"
+      }
+    ],
     "note_attributes": [
       {
         "name": "custom engraving",
@@ -110,6 +121,12 @@
             "title": "State Tax",
             "price": "3.98",
             "rate": 0.06
+          }
+        ],
+        "discount_allocations": [
+          {
+            "amount": "19.90",
+            "discount_application_index": 0
           }
         ]
       },

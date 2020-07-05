@@ -24,6 +24,8 @@ defmodule Shopify.Order do
     ShippingAddress,
     ShippingLine,
     LineItem,
+    DiscountAllocation,
+    DiscountApplication,
     DiscountCode,
     Fulfillment,
     TaxLine
@@ -42,6 +44,7 @@ defmodule Shopify.Order do
     :currency,
     :customer,
     :discount_codes,
+    :discount_applications,
     :email,
     :financial_status,
     :fulfillments,
@@ -108,16 +111,19 @@ defmodule Shopify.Order do
       line_items: [
         %LineItem{
           properties: [%Attribute{}],
-          tax_lines: [%TaxLine{}]
+          tax_lines: [%TaxLine{}],
+          discount_allocations: [%DiscountAllocation{}]
         }
       ],
       discount_codes: [%DiscountCode{}],
+      discount_applications: [%DiscountApplication{}],
       fulfillments: [
         %Fulfillment{
           line_items: [
             %LineItem{
               properties: [%Attribute{}],
-              tax_lines: [%TaxLine{}]
+              tax_lines: [%TaxLine{}],
+              discount_allocations: [%DiscountAllocation{}]
             }
           ]
         }
