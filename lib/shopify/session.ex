@@ -17,7 +17,7 @@ defmodule Shopify.Session do
 
   @type t :: %__MODULE__{
           type: :basic | :oauth,
-          shop_name: binary(),
+          shop_name: binary() | nil,
           api_key: binary() | nil,
           password: binary() | nil,
           access_token: binary() | nil,
